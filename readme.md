@@ -1,4 +1,5 @@
-### ResultAPI
+### FattyAPI
+#### version 1.0
 * 初始化ResultAPI项目
     * 直接在根目录执行 pm2 start pm2.config.json
     * 如果没有安装pm2 请先执行 npm install pm2 -g 或者 cnpm install pm2 -g
