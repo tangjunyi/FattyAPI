@@ -37,8 +37,12 @@ const server = app.listen(config.port, function() {
     let host = server.address().address;
     let port = server.address().port;
     console.log(
-        '(\\(\\ ' + '\n' +
-        '( -.-) ' + '\n' +
-        'o_(")(")' + '\n' +
+        '            ' + ' _____     ___   _____   _____  __    __    ___   _____   _  ' + '\n' +
+        '            ' + '|  ___|   /   | |_   _| |_   _| \\ \\  / /   /   | |  _  \\ | | ' + '\n' +
+        '(\\(\\        ' + '| |__    / /| |   | |     | |    \\ \\/ /   / /| | | |_| | | | ' + '\n' +
+        '( -.-)      ' + '|  __|  / /-| |   | |     | |     \\  /   / /-| | |  ___/ | | ' + '\n' +
+        'o_(")(")    ' + '| |    / /--| |   | |     | |     / /   / /--| | | |     | | ' + '\n' +
+        '            ' + '|_|   /_/   |_|   |_|     |_|    /_/   /_/   |_| |_|     |_| ' + '\n' +
+        '            ' + '\n' +
         ' Started at ' + host + ':' + port + '@FattyAPI ' + new Date().Format("yyyy-MM-dd hh:mm:ss.S") + '\n');
 });
