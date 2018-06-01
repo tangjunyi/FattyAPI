@@ -1,4 +1,14 @@
-### FattyAPI
+## FattyAPI
+### 目录说明
+* app 应用文件层
+    * common 公共方法文件脚本目录
+    * config 配置文件脚本目录
+    * controller 控制器目录
+    * route 路由脚本目录
+    * service 调用后台接口api目录
+* var 工具目录
+    * logs 日志目录
+### 版本说明
 #### version 1.0 
 * 初始化ResultAPI项目
     * 直接在根目录执行 pm2 start pm2.config.json
@@ -22,13 +32,5 @@
     * autorestart:启用/禁用应用程序崩溃或退出时自动重启
     * vizion:启用/禁用vizion特性(版本控制)
 
-### 目录说明
-* app 应用文件层
-    * common 公共方法文件脚本目录
-    * config 配置文件脚本目录
-    * controller 控制器目录
-    * route 路由脚本目录
-    * service 调用后台接口api目录
-* var 工具目录
-    * logs 日志目录
+
 
