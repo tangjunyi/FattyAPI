@@ -1,5 +1,5 @@
 {
-    "name": "FattyAPI",
+    "name": "fattyapi",
     "version": "1.0.0",
     "description": "nodeapi",
     "main": "app.js",
