@@ -1,5 +1,5 @@
 ### FattyAPI
-#### version 1.0
+#### version 1.0 
 * 初始化ResultAPI项目
     * 直接在根目录执行 pm2 start pm2.config.json
     * 如果没有安装pm2 请先执行 npm install pm2 -g 或者 cnpm install pm2 -g
@@ -21,7 +21,6 @@
     * exec_mode:应用程序启动模式，这里设置的是cluster_mode（集群），默认是fork
     * autorestart:启用/禁用应用程序崩溃或退出时自动重启
     * vizion:启用/禁用vizion特性(版本控制)
-* 本项目直接运行为 集群模式 8线程，如果只需要调试请将instances和exec_mode去除
 
 ### 目录说明
 * app 应用文件层
