@@ -5,7 +5,7 @@ module.exports = function() {
     return {
         appName: 'FattyAPI',
         appBaseDir: appBaseDir,
-        openapi: "api地址",
+        openapi: "http://test.tangjunyi.net/index.php/api/",
         port: 17150,
         cookies: {
             secretKey: 'loveyourlife'

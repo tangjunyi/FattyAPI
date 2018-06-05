@@ -9,6 +9,14 @@
 * var 工具目录
     * logs 日志目录
 ### 版本说明
+
+#### version 1.1
+* 增加DEMO 获取文件列表 localhost:17150/file/list
+* common/common.js 增加公共调用接口方法
+    * 并且增加请求日志
+* config/config.js 中配置请求接口地址
+* 增加controller层
+
 #### version 1.0 
 * 初始化ResultAPI项目
     * 直接在根目录执行 pm2 start pm2.config.json

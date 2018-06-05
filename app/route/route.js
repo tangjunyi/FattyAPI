@@ -1,5 +1,5 @@
-const userRoute = require('./userRoute');
+const fileRoute = require('./fileRoute');
 
 module.exports = function(app) {
-    app.use('/user', userRoute);
+    app.use('/file', fileRoute);
 }

@@ -37,12 +37,35 @@ module.exports = function() { // 对Date的扩展，将 Date 转化为指定格�
 
     //全局定义Service层载入文件方法
     global.importService = function(url) {
-            const ServiceClass = loadScript(url);
-            return 'function' === typeof ServiceClass ? new ServiceClass : ServiceClass;
-        }
-        //全局定义Controller层载入文件方法
+        let ServiceClass = loadScript(url);
+        return 'function' === typeof ServiceClass ? new ServiceClass : ServiceClass;
+    }
+
+    //全局定义Controller层载入文件方法
     global.importController = function(url) {
-        let ControllerClass = oadScript(url);
+        let ControllerClass = loadScript(url);
         return 'function' === typeof ControllerClass ? new ControllerClass : ControllerClass;
+    }
+
+    //全局定义请求方法
+    global.__Ajax = function(url, params, res) {
+        let apiUrl = config.openapi + url;
+        request({
+            //填写链接后台接口区域
+            url: apiUrl,
+            method: "POST",
+            json: true,
+            headers: {
+                'contentType': 'application/json; charset=utf-8',
+            },
+            body: params
+        }, function(error, response, body) {
+            console.log(ajaxLogs());
+            function ajaxLogs() {
+                let backStr = '[' + new Date().Format("yyyy-MM-dd hh:mm:ss.S") + '][INFO][FattyAPI] - {"project":"FattyAPI", "method":"POST", "uri":"' + apiUrl + '", "response":"' + JSON.stringify(body) + '"}';
+                return backStr;
+            }
+            res.send(body);
+        });
     }
 }
