@@ -16,6 +16,7 @@
     * 并且增加请求日志
 * config/config.js 中配置请求接口地址
 * 增加controller层
+    * 目前contorller 尚有问题，暂时屏蔽下个版本更新处理
 
 #### version 1.0 
 * 初始化ResultAPI项目

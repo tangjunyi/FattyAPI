@@ -1,4 +1,3 @@
-const request = require('request');
 const FileService = importService('service/file');
 
 module.exports = {
