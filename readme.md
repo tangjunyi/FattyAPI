@@ -8,7 +8,12 @@
     * service 调用后台接口api目录
 * var 工具目录
     * logs 日志目录
+
 ### 版本说明
+#### version 1.2
+* 引入request-promise 模块
+* 解决version 1.1 controller层 bug及问题
+    * 现阶段controller层接受到返回数据后可以在.then里面直接操作及分析数据
 
 #### version 1.1
 * 增加DEMO 获取文件列表 localhost:17150/file/list

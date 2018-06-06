@@ -1,6 +1,6 @@
 class FileService {
     filelist(params,res) {
-        __Ajax("port/fileList",params,res);
+        return __Ajax("port/fileList",params,res);
     }
 }
 

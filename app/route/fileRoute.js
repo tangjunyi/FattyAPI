@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const FileService = importService('service/file');
+const FileController = importController('controller/file');
 
 router.post('/list', function(req, res) {
-    FileService.filelist(Object.assign({}, req.body, {
+    FileController.filelist(Object.assign({}, req.body, {
         cookie: req.headers.cookie
     }), res);
 });

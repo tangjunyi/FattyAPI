@@ -2,6 +2,9 @@ const FileService = importService('service/file');
 
 module.exports = {
     filelist: function(req, res) {
-        FileService.filelist(req.params,res);
+        FileService.filelist(req.params,res)
+            .then(response => {
+                res.send(response);
+            });
     }
 }

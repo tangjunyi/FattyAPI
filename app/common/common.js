@@ -1,5 +1,6 @@
 'use strict';
 const request = require('request');
+const rp = require('request-promise');
 module.exports = function() { // 对Date的扩展，将 Date 转化为指定格式的String
     // 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符， 
     // 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 
@@ -50,22 +51,23 @@ module.exports = function() { // 对Date的扩展，将 Date 转化为指定格�
     //全局定义请求方法
     global.__Ajax = function(url, params, res) {
         let apiUrl = config.openapi + url;
-        request({
-            //填写链接后台接口区域
-            url: apiUrl,
-            method: "POST",
-            json: true,
-            headers: {
-                'contentType': 'application/json; charset=utf-8',
+        let options= {
+            method:'post',
+            uri: apiUrl,
+            body: params,
+            headers:{
+                'User-Agent': 'Request-Promise',
+                'contentType': 'application/json; charset=utf-8'
             },
-            body: params
-        }, function(error, response, body) {
+            json: true
+        };
+        return rp(options).then(function(data){
             console.log(ajaxLogs());
             function ajaxLogs() {
-                let backStr = '[' + new Date().Format("yyyy-MM-dd hh:mm:ss.S") + '][INFO][FattyAPI] - {"project":"FattyAPI", "method":"POST", "uri":"' + apiUrl + '", "response":"' + JSON.stringify(body) + '"}';
+                let backStr = '[' + new Date().Format("yyyy-MM-dd hh:mm:ss.S") + '][INFO][FattyAPI] - {"project":"FattyAPI", "method":"POST", "uri":"' + apiUrl + '", "response":"' + JSON.stringify(data) + '"}';
                 return backStr;
             }
-            res.send(body);
+            return data;
         });
     }
 }
