@@ -1,4 +1,13 @@
 ## FattyAPI
+### 项目说明
+* 在大量后端JAVA/PHP/C#等语言被web端使用ajax请求的过程中，导致后端服务器地址暴露并且受到攻击的背景下，增加了一个嫁接在web端已经后端接口的中间层。
+* 项目主要架构为 View层 C层(controller层) S层(service层) DAO层
+    * View层 前台web项目含APP
+    * C层 主要用于请求控制及转换
+    * S层 主要做获取数据后的分析以及重组
+    * DAO层 数据层嫁接在各种后台接口之上
+* 从而做到后端最终地址不被暴露，从而受到恶意攻击
+
 ### 目录说明
 * app 应用文件层
     * common 公共方法文件脚本目录
@@ -13,7 +22,7 @@
 #### version 1.2
 * 引入request-promise 模块
 * 解决version 1.1 controller层 bug及问题
-    * 现阶段controller层接受到返回数据后可以在.then里面直接操作及分析数据
+    * 现阶段service层接受到返回数据后可以在.then里面直接操作及分析数据
 
 #### version 1.1
 * 增加DEMO 获取文件列表 localhost:17150/file/list

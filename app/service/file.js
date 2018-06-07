@@ -1,6 +1,9 @@
 class FileService {
     filelist(params,res) {
-        return __Ajax("port/fileList",params,res);
+        __Ajax("port/fileList",params,res)
+            .then(response => {
+                res.send(response);
+            });
     }
 }
 
