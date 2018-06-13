@@ -4,6 +4,6 @@
         "script": "server.js",
         "watch": ["."],
         "ignore_watch": ["var", "node_modules", ".idea", ".svn", ".git"],
-        "env": { "NODE_ENV": "local" },
+        "env": { "NODE_ENV": "local" }
     }]
 }

@@ -1,10 +1,10 @@
 ## FattyAPI
 ### 项目说明
 * 在大量后端JAVA/PHP/C#等语言被web端使用ajax请求的过程中，导致后端服务器地址暴露并且受到攻击的背景下，增加了一个嫁接在web端已经后端接口的中间层。
-* 项目主要架构为 View层 C层(controller层) S层(service层) DAO层
+* 项目主要架构为 View层 ViewModel层 DAO层
     * View层 前台web项目含APP
-    * C层 主要用于请求控制及转换
-    * S层 主要做获取数据后的分析以及重组
+        * 在Version 1.3 增加对于View层的支持，如果只想使用存ViewModel层，可以直接无视Views层相关处理
+    * ViewModel层 主要用于请求控制及转换和做获取数据后的分析以及重组
     * DAO层 数据层嫁接在各种后台接口之上
 * 从而做到后端最终地址不被暴露，从而受到恶意攻击
 
@@ -19,6 +19,13 @@
     * logs 日志目录
 
 ### 版本说明
+#### version 1.3
+* 为了小伙伴们方便增加了View层 直接成为VVM层框架
+* 新增文件夹 public
+    * 里面含有js/img/css 三个文件夹放入对应公用资源
+* 新增文件夹 Views 里面存放对应的Html页面元素
+    * 访问示例: http://localhost:17150/list
+
 #### version 1.2
 * 引入request-promise 模块
 * 解决version 1.1 controller层 bug及问题

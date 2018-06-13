@@ -1,15 +1,15 @@
 'use strict';
+const path = require('path');
 
 module.exports = function() {
     let appBaseDir = __dirname + '/../';
     return {
         appName: 'FattyAPI',
         appBaseDir: appBaseDir,
+        viewBaseDir: path.join(appBaseDir, '../views/'),
+        publicBaseDir: path.join(appBaseDir, '../public/'),
         openapi: "http://test.tangjunyi.net/index.php/api/",
         port: 17150,
-        cookies: {
-            secretKey: 'loveyourlife'
-        },
         log4js: {
             appenders: {
                 console: {

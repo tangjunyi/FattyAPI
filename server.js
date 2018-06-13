@@ -3,12 +3,18 @@ const app = express();
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const log4js = require('log4js');
+const ejs = require('ejs');
 
 const config = require('./app/config/config')();
 const common = require('./app/common/common')();
 
 //定义全局config变量
 global.config = config;
+
+//静态资源配置
+app.engine('html', ejs.__express);
+app.set('view engine', 'html');
+app.use(express.static(config.publicBaseDir));
 
 //配置log4js日志打印
 log4js.configure(config.log4js);
@@ -27,8 +33,6 @@ app.use(bodyParser.urlencoded({
     limit: '50mb',
     extended: false
 }));
-
-app.use(cookieParser(config.cookies.secretKey));
 
 //配置路由
 require('./app/route/route')(app);

@@ -1,5 +1,7 @@
+const viewRoute = require('./viewRoute');
 const fileRoute = require('./fileRoute');
 
 module.exports = function(app) {
-    app.use('/file', fileRoute);
+    app.use('/', viewRoute);
+    app.use('/api/file', fileRoute);
 }
