@@ -21,6 +21,11 @@
     * service 调用后台接口api目录
 * var 工具目录
     * logs 日志目录
+* public 静态资源目录
+    * img 图片
+    * css 样式
+    * js 脚本
+* views 页面文件目录
 
 ### 版本说明
 #### version 1.3
