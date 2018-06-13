@@ -3,10 +3,14 @@
 * 在大量后端JAVA/PHP/C#等语言被web端使用ajax请求的过程中，导致后端服务器地址暴露并且受到攻击的背景下，增加了一个嫁接在web端已经后端接口的中间层。
 * 项目主要架构为 View层 ViewModel层 DAO层
     * View层 前台web项目含APP
-        * 在Version 1.3 增加对于View层的支持，如果只想使用存ViewModel层，可以直接无视Views层相关处理
+        * 在Version_1.3 增加对于View层的支持，如果只想使用纯ViewModel层的框架，可以直接拉取分支Version_1.2版本
     * ViewModel层 主要用于请求控制及转换和做获取数据后的分析以及重组
     * DAO层 数据层嫁接在各种后台接口之上
 * 从而做到后端最终地址不被暴露，从而受到恶意攻击
+
+### 分支说明
+* Version_1.3 含有View层，整体框架为VVM框架
+* Version_1.2 不含有View层，只包含 ViewModel层，在该项目中分为controller和service
 
 ### 目录说明
 * app 应用文件层
