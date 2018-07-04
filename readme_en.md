@@ -1,12 +1,12 @@
 ### FattyAPI
-#### A description of the project
-* in the process of using a large number of back end JAVA/PHP/C# and other languages to be used by the web side, causing the back end server address to be exposed and attacked, an intermediate layer grafted on the back end interface of the web end is added.
-* the main structure of the project is View level ViewModel layer DAO layer.
-    * the View layer front web project contains APP
-        * increase support for View layer in Version_1.3. If you want to use pure ViewModel layer framework, you can pull Version_1.2 branch directly.
-    * the ViewModel layer is mainly used for request control and conversion and analysis and reorganization after obtaining data.
-    * DAO layer data layer is grafted on all kinds of background interfaces.
-* so that the end address of the back end is not exposed, thus being attacked by malicious.
+#### Project Description
+* In the process of a large number of back-end JAVA/PHP/C# being request by front-end via AJAX, the back end server address is exposed and attacked. This project is an intermediate layer grafted between the back-end and front-end interface to prevent the previous mentioned problem.
+* The main structure of the project is consisted of View level, ViewModel layer and DAO layer.
+    * View layer: front-end web project with APP
+        * added support for View layer in Version_1.3. If you only want to use pure ViewModel layer framework, you can pull Version_1.2           branch directly.
+    * ViewModel layer: mainly used for requests control and conversion, analysis and reorganization after obtaining data.
+    * DAO layer data layer is integrated on all kinds of back-end interfaces.
+* End address of back-end is not exposed, which prevents back-end from being attacked maliciously.
 
 #### A branch explanation
 * Version_1.3 contains View layer, and the overall framework is VVM framework.
