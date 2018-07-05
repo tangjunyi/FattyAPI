@@ -14,18 +14,18 @@
 
 #### Catalog
 * app: application file layer. App folder contains the following sub-directories:
-   * common: common method scripts directory
-   * config: configuration scripts directory
-   * controller: controller directory
-   * route: router script directory
-   * service: the background interface API calls directory
-* var: tool directory. Var folder contains the following sub-directories
-   * logs: log directory
-* public: static resource directory. Public folder contains the foloowing sub-directories
-   * img: picture
-   * CSS: Style
-   * JS:script
-* views: page file directory
+   * common: Directory contains all the comomon method scripts.
+   * config: Directory contains all the configurations.
+   * controller: Directory contains all the controllers.
+   * route: Directory contains all the router scripts.
+   * service: Directory contains the background interface API calls.
+* var: tool directory. Var folder contains the following sub-directories.
+   * logs: Directory contains all the log files.
+* public: static resource directory. Public folder contains the foloowing sub-directories.
+   * img: Directory contains all pictures.
+   * CSS: Directory contains CSS style files.
+   * JS: Directory contains javascript scripts.
+* views: Directory contrins all the page files.
 
 #### A version of the version
 ##### Version 1.3
