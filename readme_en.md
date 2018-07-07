@@ -12,20 +12,20 @@
 * Version_1.3 contains View layer, and the overall framework is VVM.
 * Version_1.2 contains only ViewModel layer divided into controller and service in the project.
 
-#### A description of the catalogue
-* app application file layer
-* common common method file script directory
-* config configuration file script directory
-* controller controller directory
-* route routing script directory
-* service calls the background interface API directory
-* var tool directory
-* logs log directory
-* public static resource directory
-* img picture
-* CSS Style
-* JS script
-* views page file directory
+#### Catalog
+* app: application file layer. App folder contains the following sub-directories:
+   * common: Directory contains all the comomon method scripts.
+   * config: Directory contains all the configurations.
+   * controller: Directory contains all the controllers.
+   * route: Directory contains all the router scripts.
+   * service: Directory contains the background interface API calls.
+* var: tool directory. Var folder contains the following sub-directories.
+   * logs: Directory contains all the log files.
+* public: static resource directory. Public folder contains the foloowing sub-directories.
+   * img: Directory contains all pictures.
+   * CSS: Directory contains CSS style files.
+   * JS: Directory contains javascript scripts.
+* views: Directory contrins all the page files.
 
 #### A version of the version
 ##### Version 1.3
