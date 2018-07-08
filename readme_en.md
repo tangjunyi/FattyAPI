@@ -27,46 +27,54 @@
    * JS: Directory contains javascript scripts.
 * views: Directory contrins all the page files.
 
-#### A version of the version
+#### Version description
 ##### Version 1.3
-* for the convenience of small partners, the View layer is added directly to the VVM layer framework.
-* New Folder Public
-* contains js/img/css three folders into the corresponding public resources.
-* add new folder Views to store corresponding Html page elements.
-* access sample: http://localhost:17150/list
+* View layer is added for user convenience, used directly as the VVM layer framework.
+* New Folder: Public
+   * This folder contains js/img/css sub-folders, relating to the corresponding public resources.
+* New Folder: Views 
+   * This fold is to store corresponding Html page elements.
+   * access sample: http://localhost:17150/list
 
 ##### Version 1.2
-* introducing the request-promise module
-* solve the version 1.1 controller layer bug and the problem
-* at this stage, the service layer can directly manipulate and analyze data in.Then after receiving the returned data.
+* Request-promise module is introduced.
+* Fixed the bugs and problems in controller layer from version 1.1
+   * Current service layer can manipulate and analyze data directly in .then after receiving the returned data.
 
 ##### Version 1.1
-* add DEMO to get file list localhost:17150/file/list
-* common/common.js increases the common call interface method
-* and increase the request log
-* configuring the request interface address in config/config.js
-* increase the controller layer
-* there is still a problem with contorller, temporarily shielding the next version of the update.
+* Added DEMO: Get file list: localhost:17150/file/list
+* common/common.js 
+   * Added common call interface method
+   * Added request log
+* Updated the request interface address in config/config.js
+* Added the controller layer
+   * Contorller is temporary hidden due to known problems. The problem will be fixed in next update.
 
-##### Version 1
+##### Version 1.0
 * initializing the ResultAPI project
-* execute PM2 start pm2.config.json directly in the root directory.
-* if PM2 is not installed, please execute NPM install PM2 -g or cnpm install PM2 -g first.
+   * execute PM2 start pm2.config.json directly in the root directory.
+   * If PM2 is not installed, please execute:
+      * npm install PM2 -g or
+      * cnpm install PM2 -g first.
 * pm2.config.json description
-* apps:json structure, apps is an array, and each array member is corresponding to an application running in PM2.
-* name: application name
-* the directory where the cwd: application is located
-* the script path of the script: application
-* error_file: custom application error log file
-* out_file: custom application log file
-* pid_file: custom application's PID file
-* how many instances can be enabled by instances: for load balancing? If -i 0 or -i max, the number of instances is determined according to the number of current machine cores.
-* min_uptime: minimum run time, which is set here 60s that if the application exits within 60s, PM2 will think that the program exits exceptionally, and the number of max_restarts settings is triggered at this time.
-* max_restarts: sets the number of application exceptions to restart and defaults 15 times (counting from 0).
-* cron_restart: starts regularly to solve the problems that can be solved by restart.
-* whether watch: enables monitoring mode, and the default is false. If set to true, PM2 automatically reloads when the application changes. You can also set up the files that you want to monitor.
-* merge_logs: log
-* the script type of the exec_interpreter: application. The shell used here is nodejs by default.
-* exec_mode: application startup mode, where cluster_mode (cluster) is set, and fork is the default.
-* autorestart: enable / disable auto restart when application collapses or exits.
-* vizion: enable / disable vizion features (version control)
+   * apps:json structure, apps is an array, and each array element is corresponding to an application running in PM2.
+   * name: application name
+   * cwd: application directory
+   * script: script directory of the application
+   * error_file: error log file for custom application
+   * out_file: log file of custom application
+   * pid_file:  PID file of custom application
+   * instances: number of instances to be initiated, which can be used for load balancing.
+      * If -i 0 or -i max, the number of instances is determined by the number of current cores of the machine.
+   * min_uptime: minimum run time. Default value is 60s.
+      * If the application exits within 60s, PM2 will think that the program exits exceptionally and trigger max_restarts             settings
+   * max_restarts: the number of application restarts triggered by exceptions. Default value is 15 times (counting from 0).
+   * cron_restart: restart timer.
+      * Used to solve the problems that can be solved by restart.
+   * watch: monitoring mode. Default value is false. PM2 automatically reloads by application changes if the value is true. 
+      * Users can set the files to monitor.
+   * merge_logs: logs
+   * exec_interpreter: the script type of application. Default is Node.js. Here uses Shell.
+   * exec_mode: application startup mode. Default is fork. Here sets to cluster_mode (cluster).
+   * autorestart: enable/disable auto restart when application crashes or exits.
+   * vizion: enable/disable vizion features (version control tool)
