@@ -68,7 +68,7 @@
       * If -i 0 or -i max, the number of instances is determined by the number of current cores of the machine.
    * min_uptime: minimum run time. Default value is 60s.
       * If the application exits within 60s, PM2 will think that the program exits exceptionally and trigger max_restarts             settings
-   * max_restarts: the number of application restarts triggered by exceptions. Default value is 15 times (counting from 0).
+   * max_restarts: the number of application restarts triggered by exceptions. Default value is 15 (counting from 0).
    * cron_restart: restart timer.
       * Used to solve the problems that can be solved by restart.
    * watch: monitoring mode. Default value is false. PM2 automatically reloads by application changes if the value is true. 
